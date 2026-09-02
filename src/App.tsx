@@ -1,118 +1,220 @@
-import React from 'react';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      {/* Header */}
-      <header style={{
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        color: 'white',
-        padding: '100px 20px',
-        textAlign: 'center'
-      }}>
-        <h1 style={{ fontSize: '3rem', marginBottom: '10px' }}>Abdullah Riaz</h1>
-        <p style={{ fontSize: '1.5rem', opacity: 0.9 }}>Web Developer | Designer</p>
-      </header>
+    <div className="app">
 
-      {/* About Section */}
-      <section style={{ padding: '60px 20px', maxWidth: '800px', margin: '0 auto' }}>
-        <h2 style={{ color: '#333', marginBottom: '20px' }}>About Me</h2>
-        <p style={{ lineHeight: '1.8', color: '#666' }}>
-          I am a passionate web developer with expertise in HTML, CSS, JavaScript, and React. 
-          I love creating beautiful and functional websites that make a difference.
-        </p>
-      </section>
+      {/* NAVBAR */}
+      <nav className="navbar">
+        <div className="logo">AR<span>.</span></div>
 
-      {/* Skills Section */}
-      <section style={{ 
-        background: '#f5f5f5', 
-        padding: '60px 20px',
-        textAlign: 'center'
-      }}>
-        <h2 style={{ color: '#333', marginBottom: '30px' }}>My Skills</h2>
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          gap: '20px', 
-          flexWrap: 'wrap' 
-        }}>
-          {['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Node.js'].map((skill) => (
-            <div key={skill} style={{
-              background: 'white',
-              padding: '20px 40px',
-              borderRadius: '10px',
-              boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-              fontWeight: 'bold',
-              color: '#667eea'
-            }}>
-              {skill}
-            </div>
-          ))}
+        <div className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
-      </section>
 
-      {/* Projects Section */}
-      <section style={{ padding: '60px 20px', maxWidth: '1000px', margin: '0 auto' }}>
-        <h2 style={{ color: '#333', marginBottom: '30px', textAlign: 'center' }}>My Projects</h2>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '30px'
-        }}>
-          {[
-            { name: 'E-Commerce Website', desc: 'A full-featured online store with cart functionality' },
-            { name: 'School Portal', desc: 'Student result management system' },
-            { name: 'Portfolio Website', desc: 'Personal portfolio showcasing my work' }
-          ].map((project, index) => (
-            <div key={index} style={{
-              background: 'white',
-              padding: '30px',
-              borderRadius: '10px',
-              boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-              border: '1px solid #eee'
-            }}>
-              <h3 style={{ color: '#667eea', marginBottom: '10px' }}>{project.name}</h3>
-              <p style={{ color: '#666' }}>{project.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section style={{ 
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        color: 'white',
-        padding: '60px 20px',
-        textAlign: 'center'
-      }}>
-        <h2 style={{ marginBottom: '20px' }}>Get In Touch</h2>
-        <p style={{ marginBottom: '30px', fontSize: '1.1rem' }}>
-          Feel free to contact me for any projects or opportunities!
-        </p>
-        <a href="mailto:your.email@example.com" style={{
-          display: 'inline-block',
-          background: 'white',
-          color: '#667eea',
-          padding: '15px 40px',
-          borderRadius: '50px',
-          textDecoration: 'none',
-          fontWeight: 'bold',
-          fontSize: '1.1rem'
-        }}>
-          Contact Me
+        <a className="nav-button" href="#contact">
+          Let's Talk
         </a>
+      </nav>
+
+
+      {/* HERO */}
+      <section className="hero" id="home">
+        <div className="hero-content">
+
+          <p className="eyebrow">
+            FRONT-END DEVELOPER & DESIGNER
+          </p>
+
+          <h1>
+            Building digital
+            <br />
+            <span>experiences.</span>
+          </h1>
+
+          <p className="hero-text">
+            Hi, I'm Abdullah Riaz. I create modern, interactive and
+            visually polished web experiences with clean code and
+            creative design.
+          </p>
+
+          <div className="hero-buttons">
+            <a href="#projects" className="primary-btn">
+              View My Work
+              <span>↗</span>
+            </a>
+
+            <a href="#contact" className="secondary-btn">
+              Contact Me
+            </a>
+          </div>
+
+        </div>
+
+        <div className="hero-number">
+          01
+        </div>
+
+        <div className="scroll-text">
+          SCROLL TO EXPLORE ↓
+        </div>
       </section>
 
-      {/* Footer */}
-      <footer style={{
-        background: '#333',
-        color: 'white',
-        textAlign: 'center',
-        padding: '20px'
-      }}>
-        <p>© 2026 Abdullah Riaz. All Rights Reserved.</p>
+
+      {/* ABOUT */}
+      <section className="section about" id="about">
+
+        <div className="section-label">
+          <span>01</span>
+          ABOUT ME
+        </div>
+
+        <div className="about-content">
+          <h2>
+            Turning ideas into
+            <span> memorable interfaces.</span>
+          </h2>
+
+          <p>
+            I'm a developer and designer focused on creating websites
+            that look beautiful, feel smooth and work efficiently.
+            I enjoy experimenting with modern UI, animations and
+            interactive experiences.
+          </p>
+
+          <p>
+            My goal is simple — build websites that people remember.
+          </p>
+        </div>
+
+      </section>
+
+
+      {/* SKILLS */}
+      <section className="section skills" id="skills">
+
+        <div className="section-label">
+          <span>02</span>
+          MY SKILLS
+        </div>
+
+        <div className="skills-grid">
+
+          <div className="skill">
+            <span>01</span>
+            <h3>HTML</h3>
+            <p>Semantic and clean web structure.</p>
+          </div>
+
+          <div className="skill">
+            <span>02</span>
+            <h3>CSS</h3>
+            <p>Modern layouts, responsive design and animations.</p>
+          </div>
+
+          <div className="skill">
+            <span>03</span>
+            <h3>JavaScript</h3>
+            <p>Interactive and dynamic experiences.</p>
+          </div>
+
+          <div className="skill">
+            <span>04</span>
+            <h3>React</h3>
+            <p>Component-based modern web applications.</p>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* PROJECTS */}
+      <section className="section projects" id="projects">
+
+        <div className="section-label">
+          <span>03</span>
+          SELECTED WORK
+        </div>
+
+        <div className="project-list">
+
+          <div className="project">
+            <div className="project-info">
+              <span>01 / WEB DESIGN</span>
+              <h3>Creative Portfolio</h3>
+              <p>
+                A modern portfolio experience with a dark,
+                minimal and cinematic visual style.
+              </p>
+            </div>
+
+            <div className="project-arrow">↗</div>
+          </div>
+
+
+          <div className="project">
+            <div className="project-info">
+              <span>02 / DEVELOPMENT</span>
+              <h3>Interactive Website</h3>
+              <p>
+                A responsive website focused on smooth
+                interactions and engaging user experience.
+              </p>
+            </div>
+
+            <div className="project-arrow">↗</div>
+          </div>
+
+
+          <div className="project">
+            <div className="project-info">
+              <span>03 / UI DESIGN</span>
+              <h3>Modern Dashboard</h3>
+              <p>
+                A clean interface designed around usability,
+                typography and visual hierarchy.
+              </p>
+            </div>
+
+            <div className="project-arrow">↗</div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* CONTACT */}
+      <section className="contact" id="contact">
+
+        <p className="eyebrow">HAVE A PROJECT IN MIND?</p>
+
+        <h2>
+          Let's build something
+          <span> great.</span>
+        </h2>
+
+        <a
+          href="mailto:your@email.com"
+          className="contact-button"
+        >
+          Get In Touch ↗
+        </a>
+
+      </section>
+
+
+      {/* FOOTER */}
+      <footer>
+        <div>© 2026 Abdullah Riaz</div>
+        <div>Designed & Built with passion.</div>
       </footer>
+
     </div>
   );
 }
